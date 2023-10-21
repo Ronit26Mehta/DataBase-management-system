@@ -1,0 +1,31 @@
+USE second;
+INSERT INTO movie values(1,'FIGHT CLUB','action','5',100.50),(2,'DRIVE','race','69',420.69),(3,'peaky blinders','war','1920',1000.00);
+SELECT Moive_no,Title,Price * 0.05 AS "price 5%" ,Price * 1.05 As"price 105%" FROM movie;
+SELECT Moive_no,Title,Price*0.15 AS "new price 1",Price*1.25 AS "new_price" FROM movie;
+INSERT INTO movie values(3,'deshdrohi','all','5',169.50),(4,'race3','selmon','69',170.69),(5,'kgf','war','9999',150.00);
+SELECT * FROM movie WHERE Price between 150 and 200;
+show tables;
+describe cust;
+select Cust_id,Lname,Fname,Area,Phone_no from cust where Phone_no = 723622 OR Phone_no =123784;
+select * from cust where Area <> 'SA' and Area <> 'CH';
+DESCRIBE invoice;
+select * from invoice;
+insert into invoice values('1',10,'100','1996-07-26','1995-07-28'),('1',1,'100','1996-07-26','1995-07-28'),('1',10,'100','1996-07-26','1995-07-28'),('1',2,'100','1996-07-26','1995-07-28'),('1',3,'100','1996-07-26','1995-07-28');
+select * from invoice where Movie_no  between  1 and 5 ;
+select * from invoice where Movie_no not between  1 and 5 ;
+select * from cust;
+insert into  cust values('A07','Singh','Bara','LH',194771); 
+select * from cust;
+select * from cust where Fname LIKE "Ba%";
+select * from cust;
+insert into cust values('A08','Singh','Braa','kA',196571),('A09','KUSH','mhughambo','is',1970); 
+select * from cust where Fname LIKE"_r%" or Fname like "_h%"; 
+insert into cust values('A10','Singh','Rab','kA',196571),('A11','KUSH','Ran','is',1970);
+select * from cust where Fname LIKE "Ra_" and length(Fname) = 3;
+select * from cust;
+insert into cust values('A12','Singh','Hansel','kA',196571),('A13','KUSH','Hiten','is',1970),('A13','Singh','pramda','kA',196571),('A14','KUSH','aruma','is',1970);
+select * from cust;
+select * from cust where Fname  in ("Hansel","Hiten","pramda","aruma");
+select * from cust where Fname    NOT in ("Hansel","Hiten","pramda","aruma");
+
+
